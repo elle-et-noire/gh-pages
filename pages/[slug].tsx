@@ -12,14 +12,6 @@ const External: NextPage<PageProps> = (props: PageProps) => {
 }
 
 export const getStaticPaths = async () => {
-  // 動的に作成する対象のページの元となる部分
-  // return {
-  //   paths: [
-  //     { params: { id: '1' } },
-  //     { params: { id: '2' } },
-  //   ],
-  //   fallback: false
-  // }
   return {
     paths: GetAllPosts().map((post) => ({
       params: {
