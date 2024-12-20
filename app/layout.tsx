@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans_JP, Kosugi_Maru, Nunito } from "next/font/google";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const noto_sans = Noto_Sans_JP({
   subsets: ["latin"],
+  variable: "--font-noto-sans"
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const kosugi_maru = Kosugi_Maru({
+  weight: "400",
   subsets: ["latin"],
+  variable: "--font-kosugi-maru"
+});
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito"
 });
 
 export const metadata: Metadata = {
@@ -24,9 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`
+        ${noto_sans.variable}
+        ${kosugi_maru.variable}
+        ${nunito.variable} antialiased`} >
         {children}
       </body>
     </html>

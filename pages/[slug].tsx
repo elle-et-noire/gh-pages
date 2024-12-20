@@ -1,14 +1,14 @@
 import { GetAllPosts } from "@/lib/post";
 import { GetStaticProps, GetStaticPropsContext, InferGetStaticPropsType, NextPage } from "next"
+import "@/app/globals.css";
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 const External: NextPage<PageProps> = (props: PageProps) => {
   return (
-    <div>
-      <h1>{props.title}ですよ〜</h1>
+    <div className="font-system">
+      <h1 className="font-bold text-4xl m-16 font-noto-sans">{props.title}ですよ〜</h1>
     </div>
   )
-
 }
 
 export const getStaticPaths = async () => {

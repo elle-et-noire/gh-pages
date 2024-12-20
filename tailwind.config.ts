@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "noto-sans": ["var(--font-noto-sans)"],
+        "system": ['var(--font-nunito)', 'var(--font-kosugi-maru)', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
